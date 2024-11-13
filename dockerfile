@@ -14,4 +14,8 @@ RUN npm install --only=production
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 EXPOSE 7000
