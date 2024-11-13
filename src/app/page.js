@@ -3,8 +3,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
 
-  console.log(process.env.REACT_APP_API_URL);
-  
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -18,7 +18,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.js</code>.
+            Get started by editing {process.env.NEXT_PUBLIC_API_URL} <code>src/app/page.js</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
