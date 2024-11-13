@@ -2,6 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+
+  console.log(process.env.REACT_APP_API_URL);
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
