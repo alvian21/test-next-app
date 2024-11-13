@@ -13,3 +13,5 @@ COPY --from=builder /app/package*.json ./
 RUN npm install --only=production
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
+
+EXPOSE 7000
