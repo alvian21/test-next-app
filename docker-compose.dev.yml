@@ -1,0 +1,15 @@
+version: '3'
+services:
+  next-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: next-app-image
+    restart: always
+    ports:
+      - 5000:80
+    env_file:
+    - .env
+    tty: true
+    container_name: next-app
+    command: ["nginx", "-g", "daemon off;"]
