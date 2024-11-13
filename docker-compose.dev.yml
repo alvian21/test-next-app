@@ -12,4 +12,4 @@ services:
     - .env
     tty: true
     container_name: next-app
-    command: ["nginx", "-g", "daemon off;"]
+    command: ["npm", "start"]
