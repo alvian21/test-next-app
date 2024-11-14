@@ -1,3 +1,6 @@
+# Remove the .next folder to ensure a fresh build
+RUN rm -rf .next
+
 # Tahap build
 FROM node:18 AS builder
 WORKDIR /app
